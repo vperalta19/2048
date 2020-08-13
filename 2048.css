@@ -1,0 +1,340 @@
+.container{
+    width: 450px;
+    margin: 0 auto;
+}
+.contenedor{
+    position: relative;
+    padding: 13px;
+    cursor: default;
+    margin-top: 10px;
+    background: #bbada0;
+    border-radius: 6px;
+    width: 450px;
+    height: 450px;
+    box-sizing: border-box;
+}
+
+.ficha{
+    position: absolute;
+    transition: 100ms ease-in-out;
+    transition-property: transform;
+}
+
+.ficha .ficha-inner{
+    border-radius: 3px;
+    background: #eee4da;
+    text-align: center;
+    font-weight: 700;
+    z-index: 10;
+    font-size: 55px;
+    width: 98px;
+    height: 98px;
+    line-height: 107.5px;
+}
+
+.ficha.ficha-2 .ficha-inner{
+    background: #eee4da;
+}
+
+.ficha.ficha-4 .ficha-inner{
+    background: #ede0c8;
+}
+
+.ficha.ficha-8 .ficha-inner{
+    color: #f9f6f2;
+    background:#f2b179
+}
+
+.ficha.ficha-16 .ficha-inner{
+    color: #f9f6f2;
+    background:#f59563
+}
+
+.ficha.ficha-32 .ficha-inner{
+    color: #f9f6f2;
+    background:#f67c5f
+}
+
+.ficha.ficha-64 .ficha-inner{
+    color: #f9f6f2;
+    background:#f65e3b
+}
+
+.ficha.ficha-128 .ficha-inner{
+    color: #f9f6f2;
+    background: #edcf72;
+    font-size:45px
+}
+
+.ficha.ficha-256 .ficha-inner{
+    color: #f9f6f2;
+    background: #edcc61;
+    font-size:45px
+}
+
+.ficha.ficha-512 .ficha-inner{
+    color: #f9f6f2;
+    background: #edc850;
+    font-size:45px
+}
+
+.ficha.ficha-1024 .ficha-inner{
+    color: #f9f6f2;
+    background: #edc53f;
+    font-size:35px
+}
+
+.ficha.ficha-2048 .ficha-inner{
+    color: #f9f6f2;
+    background: #edc22e;
+    font-size:35px
+}
+
+@media screen and (max-width: 520px) {
+    .tile.tile-128 .tile-inner {
+        font-size:25px
+    }
+
+    .tile.tile-256 .tile-inner {
+        font-size:25px
+    }
+
+    .tile.tile-512 .tile-inner {
+        font-size:25px
+    }
+
+    .tile.tile-1024 .tile-inner {
+        font-size:15px
+    }
+
+    .tile.tile-2048 .tile-inner {
+        font-size:15px
+    }
+}
+
+.ficha.fichaPosicion0_0{
+    transform: translate(0px,0px);
+}
+
+.ficha.fichaPosicion0_1{
+    transform:translate(109px, 0px)
+}
+
+.ficha.fichaPosicion0_2{
+    transform:translate(218px, 0px)
+}
+
+.ficha.fichaPosicion0_3{
+    transform:translate(327px, 0px)
+}
+
+.ficha.fichaPosicion1_0{
+    transform:translate(0px, 109px)
+}
+
+.ficha.fichaPosicion1_1{
+    transform:translate(109px, 109px)
+}
+
+.ficha.fichaPosicion1_2{
+    transform:translate(218px, 109px)
+}
+
+.ficha.fichaPosicion1_3{
+    transform:translate(327px, 109px)
+}
+
+.ficha.fichaPosicion2_0{
+    transform:translate(0px, 218px)
+}
+
+.ficha.fichaPosicion2_1{
+    transform:translate(109px, 218px)
+}
+
+.ficha.fichaPosicion2_2{
+    transform:translate(218px, 218px)
+}
+
+.ficha.fichaPosicion2_3{
+    transform:translate(327px, 218px)
+}
+
+.ficha.fichaPosicion3_0{
+    transform:translate(0px, 327px)
+}
+
+.ficha.fichaPosicion3_1{
+    transform:translate(109px, 327px)
+}
+
+.ficha.fichaPosicion3_2{
+    transform:translate(218px, 327px)
+}
+
+.ficha.fichaPosicion3_3{
+    transform:translate(327px, 327px)
+}
+
+
+
+.fichas-contenedor{
+    position: absolute;
+    z-index: 2;
+}
+
+.grid{
+    position: absolute;
+    z-index: 1;
+}
+
+.row-grid{
+    margin-bottom: 12px;
+}
+
+.row-grid:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.cell{
+    width: 97.5px;
+    height: 97.5px;
+    margin-right: 12px;
+    float: left;
+    border-radius: 3px;
+    background: rgba(238,228,218,.35);
+}
+
+.cell:last-child{
+    margin-right: 0;
+}
+
+@-webkit-keyframes appear {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        transform:scale(0)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        transform:scale(1)
+    }
+}
+
+@-moz-keyframes appear {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        transform:scale(0)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        transform:scale(1)
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        transform:scale(0)
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        transform:scale(1)
+    }
+}
+
+.nuevo .ficha-inner {
+    -webkit-animation: appear 200ms ease 100ms;
+    -moz-animation: appear 200ms ease 100ms;
+    animation: appear 200ms ease 100ms;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    animation-fill-mode:backwards
+}
+
+@-webkit-keyframes pop {
+    0% {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        transform:scale(0)
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform:scale(1.2)
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        transform:scale(1)
+    }
+}
+
+@-moz-keyframes pop {
+    0% {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        transform:scale(0)
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform:scale(1.2)
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        transform:scale(1)
+    }
+}
+
+@keyframes pop {
+    0% {
+        -webkit-transform: scale(0);
+        -moz-transform: scale(0);
+        transform:scale(0)
+    }
+
+    50% {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform:scale(1.2)
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        transform:scale(1)
+    }
+}
+
+.merged .ficha-inner {
+    z-index: 20;
+    -webkit-animation: pop 200ms ease 100ms;
+    -moz-animation: pop 200ms ease 100ms;
+    animation: pop 200ms ease 100ms;
+    -webkit-animation-fill-mode: backwards;
+    -moz-animation-fill-mode: backwards;
+    animation-fill-mode:backwards
+}
+
